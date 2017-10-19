@@ -4,11 +4,11 @@ var cleanCss = require('gulp-clean-css');
 var rename = require('gulp-rename');
 
 var paths = {
-  sass: ['./scss/**/*.scss','/www/view/**/*.scss']
+  sass: ['./scss/**/*.scss']
 };
 
 gulp.task('default', ['sass']);
-gulp.task('ionic:watch:before',['sass']);
+gulp.task('serve:before',['sass','watch']);
 gulp.task('sass', function(done) {
   gulp.src('./scss/ionic.app.scss')
     .pipe(sass())
@@ -36,7 +36,7 @@ gulp.task('concatJS',function () {
     .pipe(gulp.dext('./www/'))
 });
 
-gulp.task('watch', ['sass'], function() {
+gulp.task('watch', ['sass','style'], function() {
   gulp.watch(paths.sass, ['sass']);
   gulp.watch('./www/style/style.css',['style']);
 });

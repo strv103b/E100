@@ -1,11 +1,14 @@
 {
-  "name": "Shengyizhuanjia",
+  "name": "ShengYiZhuanJia",
   "app_id": "",
   "integrations": {
     "gulp": {}
   },
+  "type": "ionic1",
   "watchPatterns": [
-    "scss/**/*"
-  ],
-  "type": "ionic1"
+    "scss/**/*",
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ]
 }

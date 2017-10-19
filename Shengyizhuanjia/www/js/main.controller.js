@@ -1,5 +1,5 @@
 /**
- * Created by xx on 2017/9/20.
+ * Created by Administrator on 2017/9/17.
  */
 (function () {
   'use strict';
@@ -12,7 +12,8 @@
         $state.go('welcome');
       }
       else{
-        $state.go('login');
+        $state.go('welcome');
       }
     }]);
 })();
+
